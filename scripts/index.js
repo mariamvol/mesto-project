@@ -3,7 +3,7 @@ const cardPopup = document.querySelector('.popup_type_new-card');
 const imagePopup = document.querySelector('.popup_type_image');
 
 function openModal(popup) {      
-    popup.classList.add('popup_is-opened');
+    popup.classList.add('popup_is-opened');/*cscs*/
 }
 
 function closeModal(popup) {      
