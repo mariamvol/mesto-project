@@ -19,13 +19,20 @@ function CreateCard (card) {
     cardIMG.src = card.link;
     cardIMG.alt = card.name;
 
-    cardDeleteButton.addEventListener('click', () => {
-        cardElement.remove();
-      });
+    cardDeleteButton.addEventListener('click', DeleteCard);
 
     return cardElement;
 }
 
 // @todo: Функция удаления карточки
 
+function DeleteCard (event) {
+   event.target.closest('.card').remove();
+}
+
 // @todo: Вывести карточки на страницу
+
+initialCards.forEach(card => {
+    const cardE = CreateCard(card);
+    placesList.append(cardE);
+});
