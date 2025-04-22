@@ -1,3 +1,21 @@
+const profilePopup = document.querySelector('.popup_type_edit');
+const cardPopup = document.querySelector('.popup_type_new-card');
+const imagePopup = document.querySelector('.popup_type_image');
+
+function openModal(popup) {      
+    popup.classList.add('popup_is-opened');
+}
+
+function closeModal(popup) {      
+    popup.classList.remove('popup_is-opened');
+}
+
+const openProfilePopupButton = document.querySelector('.profile__edit-button');
+const closeProfilePopupButton = profilePopup.querySelector('.popup__close');
+
+openProfilePopupButton.addEventListener('click', () => openModal(profilePopup));
+closeProfilePopupButton.addEventListener('click', () => closeModal(profilePopup));
+
 // @todo: Темплейт карточки
 
 const cardTemplate = document.querySelector('#card-template').content.querySelector('.card');
