@@ -6,13 +6,15 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css"
-  
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+  <main class="content">
+    <section class="profile page__section">
       <button class="profile__add-button" type="button"></button>
     </section>
     <section class="places page__section">
-      <ul class="places__list">
-      </ul>
+      <ul class="places__list"></ul>
     </section>
   </main>
   <footer class="footer page__section">
@@ -20,6 +22,7 @@
       © 2021 Mesto Russia
     </p>
   </footer>
+
   <div class="popup popup_type_edit">
     <div class="popup__content">
       <button type="button" class="popup__close"></button>
@@ -31,6 +34,7 @@
       </form>
     </div>
   </div>
+
   <div class="popup popup_type_new-card">
     <div class="popup__content">
       <button type="button" class="popup__close"></button>
@@ -42,6 +46,7 @@
       </form>
     </div>
   </div>
+
   <div class="popup popup_type_image">
     <div class="popup__content popup__content_content_image">
       <button type="button" class="popup__close"></button>
@@ -49,20 +54,19 @@
       <p class="popup__caption"></p>
     </div>
   </div>
-</div>
-<script src="./scripts/cards.js"></script>
-<script src="./scripts/index.js" defer></script>
 
-<template id="card-template">
-  <li class="places__item card">
-    <img class="card__image" src="" alt="" />
-    <button type="button" class="card__delete-button"></button>
-    <div class="card__description">
-      <h2 class="card__title">
-      </h2>
-      <button type="button" class="card__like-button"></button>
-    </div>
-  </li>
-</template>
+  <script src="./scripts/cards.js"></script>
+  <script src="./scripts/index.js" defer></script>
+
+  <template id="card-template">
+    <li class="places__item card">
+      <img class="card__image" src="" alt="" />
+      <button type="button" class="card__delete-button"></button>
+      <div class="card__description">
+        <h2 class="card__title"></h2>
+        <button type="button" class="card__like-button"></button>
+      </div>
+    </li>
+  </template>
 </body>
 </html>
