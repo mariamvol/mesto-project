@@ -1,3 +1,5 @@
+//Форма редактирования профиля пользователя
+
 const profilePopup = document.querySelector('.popup_type_edit');
 const cardPopup = document.querySelector('.popup_type_new-card');
 const imagePopup = document.querySelector('.popup_type_image');
@@ -13,9 +15,23 @@ function closeModal(popup) {
 const openProfilePopupButton = document.querySelector('.profile__edit-button');
 const closeProfilePopupButton = profilePopup.querySelector('.popup__close');
 
-openProfilePopupButton.addEventListener('click', () => openModal(profilePopup));
+openProfilePopupButton.addEventListener('click', fillProfileForm);
 closeProfilePopupButton.addEventListener('click', () => closeModal(profilePopup));
 
+//Поля формы
+
+const profileName = document.querySelector('.profile__title');
+const profileDescription = document.querySelector('.profile__description');
+
+const nameInput = profilePopup.querySelector('[name="name"]');
+const descriptionInput = profilePopup.querySelector('[name="description"]');
+
+function fillProfileForm () {
+   nameInput.value = profileName.textContent;
+   descriptionInput.value = profileDescription.textContent;
+
+   openModal(profilePopup)
+}
 // @todo: Темплейт карточки
 
 const cardTemplate = document.querySelector('#card-template').content.querySelector('.card');
