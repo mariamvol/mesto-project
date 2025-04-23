@@ -30,8 +30,26 @@ function fillProfileForm () {
    nameInput.value = profileName.textContent;
    descriptionInput.value = profileDescription.textContent;
 
-   openModal(profilePopup)
+   openModal(profilePopup);
 }
+
+//Редактирование имени и информации о себе
+
+                                                // Находим форму в DOM
+const profileFormElement = profilePopup.querySelector('.popup__form');
+
+
+function handleProfileFormSubmit(evt) {                 // Обработчик «отправки» формы
+    evt.preventDefault();                               // Эта строчка отменяет стандартную отправку формы.
+     profileName.textContent = nameInput.value;
+     profileDescription.textContent = descriptionInput.value;
+
+    closeModal(profilePopup);
+}
+
+profileFormElement.addEventListener('submit', handleProfileFormSubmit); // Прикрепляем обработчик к форме:
+
+
 // @todo: Темплейт карточки
 
 const cardTemplate = document.querySelector('#card-template').content.querySelector('.card');
