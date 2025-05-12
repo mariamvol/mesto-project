@@ -17,8 +17,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html' // обновлённый путь
-    }),
+        template: './src/index.html',
+        filename: 'index.html'  // <-- обязательно указать это!
+      }),
     new MiniCssExtractPlugin({
         filename: 'style.css' // добавили имя для итогового CSS-файла
       })
